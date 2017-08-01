@@ -1,6 +1,5 @@
 package organizador.si;
 
-import com.sun.xml.internal.bind.v2.model.core.ID;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

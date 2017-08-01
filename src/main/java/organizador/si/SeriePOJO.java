@@ -1,7 +1,6 @@
 package organizador.si;
 
 import javax.persistence.*;
-import javax.validation.constraints.NotNull;
 
 /**
  * Created by matheus on 15/07/17.

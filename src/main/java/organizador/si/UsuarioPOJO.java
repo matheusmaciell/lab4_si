@@ -3,9 +3,6 @@
 package organizador.si;
 
 import javax.persistence.*;
-import javax.validation.constraints.NotNull;
-
-import static com.sun.xml.internal.fastinfoset.alphabet.BuiltInRestrictedAlphabets.table;
 
 /**
  * Created by matheus on 16/07/17.
