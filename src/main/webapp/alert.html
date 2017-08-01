@@ -1,0 +1,64 @@
+<md-dialog aria-label="Mango (Fruit)">
+  <form ng-cloak>
+    <md-toolbar>
+      <div class="md-toolbar-tools">
+        <h2>informações da séries</h2>
+        <span flex></span>
+        <md-button class="md-icon-button" ng-click="cancel()">
+          <md-icon md-svg-src="img/icons/ic_close_24px.svg" aria-label="Close dialog"></md-icon>
+        </md-button>
+      </div>
+    </md-toolbar>
+
+    <md-dialog-content>
+      <div class="md-dialog-content">
+      
+       
+
+        <h3>{{idSerieBuscada.Title}}</h3>
+		<img class="imagem" src="{{idSerieBuscada.Poster}}" /> 
+
+       <h3>sinopse:</h3>
+		<h4>{{idSerieBuscada.Plot}}</h4>
+
+		<h3>média do IMDb:</h3>
+		<h4>{{idSerieBuscada.imdbRating}}</h4>
+
+		<h3>classificação etária:</h3>
+		<h4>{{idSerieBuscada.Rated}}</h4>
+          <span ng-if="pertencePerfil(idSerieBuscada)">
+
+              <h3>Sua nota:</h3>
+              <h4>{{serieDoPerfil.nota}}</h4>
+              <form>
+                  <div class="input-group">
+                      <input type="text" class="form-control" ng-model="notaSerie" id="notaSerie" placeholder="Nota">
+                      <div class="input-group-btn">
+                          <button class="btn btn-default" type="submit"  ng-click="addNota(idSerieBuscada,notaSerie)" ng-disabled="!notaSerie">
+                              <i class="glyphicon glyphicon-circle-arrow-right"></i> </button>
+                      </div>
+                  </div>
+              </form>
+
+              <h3>Episódio assistido:</h3>
+              <h4>{{serieDoPerfil.episodio}}</h4>
+
+              <form>
+                  <div class="input-group">
+                      <input type="text" class="form-control" ng-model="numeroEp"  id="numeroEp" placeholder="Episódio">
+                      <div class="input-group-btn">
+                          <button class="btn btn-default" type="submit" ng-click="addEpisodio(idSerieBuscada,numeroEp)"  ng-disabled="!numeroEp">
+                              <i class="glyphicon glyphicon-circle-arrow-right"></i> </button>
+                      </div>
+                  </div>
+              </form>
+
+
+
+              <hr>
+          </span>
+        
+      </div>
+    </md-dialog-content>
+  </form>
+</md-dialog>
